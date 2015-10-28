@@ -8,7 +8,7 @@ import pickle
 import sys
 from config import *
 FILTER = []
-MODE = 'male'
+MODE = ''
 # FILTER = ['alice', 'jensen', 'tiffany']
 
 def barycentric_coords(vertices, point):
