@@ -8,7 +8,7 @@
 #python pbl_meanface.py alice,jensen,tiffany
 #python pbl_meanface.py joanna,gary,triniti
 #python pbl_meanface.py andrea,nathalie,frances,allen,cate,felicia,hammad
-python pbl_morph.py ray joey
+#python pbl_morph.py ray joey
 
 echo 'couples'
 #python pbl_morph.py ray andrea
@@ -17,3 +17,6 @@ echo 'couples'
 #python pbl_morph.py david alice
 #python pbl_morph.py eric nathalie
 
+python pbl_meanface.py david,eric,echang,kimberly,jason,kelvin,abraham,caroline
+
+python pbl_meanface.py alice,wesley,jensen,tiffany,julie,ben,kevinye

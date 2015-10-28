@@ -1,3 +1,9 @@
+"""
+This script helps create a data.js file containing the urls for morphed images
+and the original images
+"""
+
+
 import os
 from config import *
 OUTPUT_FILE = './js/data.js' 
@@ -9,6 +15,7 @@ face_urls = [x for x in face_urls if '.jpg' in x]
 
 morph_urls = get_directory_filenames(MORPH_DIR)
 morph_urls = [x for x in morph_urls if '.png' in x]
+morph_urls = [x for x in morph_urls if 'trollface' not in x]
 
 with open(OUTPUT_FILE, 'w') as outfile:
     outfile.write('face_urls=')

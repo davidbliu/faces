@@ -34,6 +34,7 @@ def get_average(pts):
 
 def create_meanface(points, images):
     points = [np.array(p) for p in points]
+    # TODO: remove last 4 points from each except im1
     avg = get_average(points)
     tri = Delaunay(avg)
     # compute output image
