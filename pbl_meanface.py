@@ -7,6 +7,7 @@ import os
 import pickle
 import sys
 from config import *
+import morph
 FILTER = []
 MODE = ''
 # FILTER = ['alice', 'jensen', 'tiffany']
@@ -85,7 +86,7 @@ if __name__=='__main__':
     control_points = [read_control_points(x) for x in fnames]
     images = [plt.imread(FACES_DIR+fname+'.jpg') for fname in fnames]
 
-    output = create_meanface(control_points, images)
+    output = morph.create_meanface(images, control_points)
     if FILTER and len(FILTER)>=2:
         imname = '_'.join(FILTER)
     imsave(MORPH_DIR+imname+'.png',output) 
