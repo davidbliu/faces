@@ -1,0 +1,11 @@
+PBL Faces
+
+images must be height: 400px width: 300px
+
+
+add imname.jpg to faces directory
+run python pbl_controlpoints.py imname
+  select control points
+run python pbl_morph.py im1 im2
+run python pbl_meanface im1,im2,im3
+
