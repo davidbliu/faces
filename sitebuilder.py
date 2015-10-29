@@ -10,6 +10,11 @@ OUTPUT_FILE = './js/data.js'
 
 def get_directory_filenames(d):
     return list(set([x for x in os.listdir(d)]))
+
+# get the images that went into creating this output
+def get_src_dst(output):
+    pass
+
 face_urls = get_directory_filenames(FACES_DIR)
 face_urls = [x for x in face_urls if '.jpg' in x]
 
