@@ -1,2 +1,5 @@
 *.DS_Store
 *.pyc
+*mom*
+*dad*
+family.html

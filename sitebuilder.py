@@ -17,10 +17,12 @@ def get_src_dst(output):
 
 face_urls = get_directory_filenames(FACES_DIR)
 face_urls = [x for x in face_urls if '.jpg' in x]
+face_urls = [x for x in face_urls if 'mom' not in x and 'dad' not in x]
 
 morph_urls = get_directory_filenames(MORPH_DIR)
 morph_urls = [x for x in morph_urls if '.png' in x]
 morph_urls = [x for x in morph_urls if 'trollface' not in x]
+morph_urls = [x for x in morph_urls if 'mom' not in x]
 
 with open(OUTPUT_FILE, 'w') as outfile:
     outfile.write('face_urls=')

@@ -15,8 +15,8 @@ import morph
 
 FILTER = []
 MODE = ''
-MODE = 'male'
-MODE = 'female'
+# MODE = 'male'
+# MODE = 'female'
 def males():
     with open('males.txt', 'r') as infile:
         males = [x.strip() for x in infile]

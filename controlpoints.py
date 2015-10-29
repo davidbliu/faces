@@ -16,6 +16,7 @@ def get_points(im1):
     p1.append(plt.ginput(8))
     plt.close()
 
+
     print '4 points each for left and right eyes'
     plt.imshow(im1)
     p1.append(plt.ginput(8))
@@ -30,13 +31,42 @@ def get_points(im1):
     p1.append(plt.ginput(5))
     plt.close()
 
+
+    # print '6 for brows'
+    # plt.imshow(im1)
+    # p1.append(plt.ginput(6))
+    # plt.close()
     corners = []
     corners.append((0, 399))
     corners.append((0, 0))
     corners.append((299, 399))
     corners.append((299, 0))
-    p1.append(corners)
+    # # p1.append(corners)
 
+    # print '16 for chin'
+    # plt.imshow(im1)
+    # p1.append(plt.ginput(16))
+    # plt.close()
+
+    # print '4 points each for left and right eyes'
+    # plt.imshow(im1)
+    # p1.append(plt.ginput(8))
+    # plt.close()
+    
+    # print '6 points for browgame'
+    # plt.imshow(im1)
+    # p1.append(plt.ginput(6))
+    # plt.close()
+    # print '8 points for mouth'
+    # plt.imshow(im1)
+    # p1.append(plt.ginput(8))
+    # plt.close()
+    # print '6 points for nose'
+    # plt.imshow(im1)
+    # p1.append(plt.ginput(6))
+    # plt.close()
+
+    p1.append(corners)
     points = [item[::-1] for sublist in p1 for item in sublist] 
     
     return points
