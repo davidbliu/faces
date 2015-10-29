@@ -550,12 +550,14 @@
 <script type = 'text/javascript'>
 FACES_DIR = './faces/';
 MORPH_DIR = './morphs/';
+
 function activateImageLinks(){
   $('img').each(function(){
     src = $(this).attr('src');
     $(this).wrap('<a href = "'+ src+'"></a>');
   });
 }
+
 function insertImages(){
   console.log('inserting before images');
   for (var i=0;i<face_urls.length;i++){
@@ -573,10 +575,10 @@ function insertImages(){
     $(img).attr('src', MORPH_DIR+morph_urls[i]);
     $('#morph-container').append(img);
   }
+  activateImageLinks();
 }
 
 $(document).ready(function(){
-  activateImageLinks();
  insertImages(); 
 
 });
