@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style type="text/css">
+.point {
+    background: rgba(0, 0, 0, 0.75);
+    cursor: crosshair;
+    color: #ffffff;
+    padding: 1px;
+    font-size:0.5em;
+    position: absolute;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.point::after {
+    width: 3px;
+    height: 3px;
+    background: #ff0000;
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+}
+#container {
+    cursor: none;
+    position: relative;
+}
+label {
+    display: block !important;
+    clear:both;
+}
+.line-horizontal {
+    border-top: 1px solid white;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+}
+.line-vertical {
+    border-left: 1px solid white;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+</style>
+<script type="text/javascript" src="./bower_components/underscore/underscore-min.js"></script>
+<script src = './bower_components/jquery/dist/jquery.min.js'></script>
+<link rel = 'stylesheet' href = './bower_components/bootstrap/dist/css/bootstrap.min.css'/>
+<script type="text/javascript" src="chooser.js"></script>
+
+<h1>Annotate Your Image</h1>
+
+<label>
+    Image:
+    <input type="text" id="input-image" />
+</label>
+<label>
+    <button id="make-lines-black">Black</button>
+    <button id="make-lines-white">White</button>
+</label>
+
+<div id="container"><div class="line-vertical"></div><div class="line-horizontal"></div><img id="image" /></div>
+
+<label>
+  <button id = 'save-btn'>Save Annotation</button>
+</label>
+</body>
+</html>
